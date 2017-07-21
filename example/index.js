@@ -84,9 +84,10 @@ let card3 = new Card({
 // 加载数据
 let data = {
     title:'change title',
-    description:'change description change description change description change description'
+    description:''
 }
 document.getElementById('card3-load').addEventListener('click',()=>{
+    data.description = 'current time:' + new Date();
     card3.load(data,function(){
         console.log('load success');
         document.getElementById('tips').innerHTML = '加载完毕，可以展开查看结果。';
