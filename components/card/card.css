@@ -1,0 +1,42 @@
+.card{
+    
+}
+.card .view-title{
+    background:none;
+    padding-top:30px;
+}
+.card .view-content{
+    font-size:0.8em;
+    display:none;
+    transform:rotateX(-90deg);
+
+}
+
+@keyframes expand
+{
+    0% {transform:scale(1,1);}
+    90% {transform:scale(2.1,2.1);}
+    100% {transform:scale(2,2);}
+}
+@keyframes expand-card-title
+{
+    from {background:none;padding-top:30px;}
+    to {background:#e0e0e0;padding:0;}
+}
+@keyframes expand-card-content
+{
+    0% {transform:rotateX(-90deg);display:block;opacity:0;}
+    100% {transform:rotateX(0);display:block;opacity:1;}
+}
+
+.expand .card{
+    animation:expand 0.2s forwards;
+    transform:scale(2,2);
+}
+.expand .card .view-title{
+    animation:expand-card-title 0.5s 0.2s forwards;
+}
+.expand .card .view-content{
+    display:block;
+    animation:expand-card-content 0.5s 0.6s forwards;
+}

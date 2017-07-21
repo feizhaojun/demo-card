@@ -1,0 +1,35 @@
+<!DOCTYPE html><html><head>
+<title>DEMO</title>
+<link type="text/css" rel="stylesheet" href="../components/view/view.css" />
+<link type="text/css" rel="stylesheet" href="../components/card/card.css" />
+<link type="text/css" rel="stylesheet" href="index.css" />
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>1 view示例</h2>
+        <div id="view1">Loading</div>
+        <p>使用一个按钮测试view组件显示show和隐藏hide两个方法：<input type="button" id="view1-trigger" value="隐藏" /></p>
+        
+    </div>
+    <div>
+        <h2>2 card示例</h2>
+        <div id="card1">Loading</div>
+        <p>默认点击 card 会执行展开和折叠操作</p>
+    </div>
+    <div>
+        <h2>3 card示例</h2>
+        <div id="card2">Loading</div>
+        <p>指定一个触发按钮来展开和折叠 <input type="button" id="card2-trigger" value="tigger" />，因为Card同时暴露了展开和折叠的方法，所以也可以直接调用 card2.expand() 和 card2.collapse() <input type="button" onclick="card2.expand();" value="展开" /><input type="button" onclick="card2.collapse();" value="折叠" /></p>
+    </div>
+    <div>
+        <h2>4 card示例</h2>
+        <div id="card3">Loading</div>
+        <p>load 数据 <input type="button" id="card3-load" value="加载" /> <span id="tips"></span></p>
+    </div>
+
+    <script src="../components/view/View.js"></script>
+    <script src="../components/card/Card.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

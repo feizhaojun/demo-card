@@ -1,0 +1,13 @@
+.view{
+    width:200px;
+    height:100px;
+    background:#f2f2f2;
+    text-align:center;
+    font-size:14px;
+}
+.view-title{
+    height:30px;
+    line-height:30px;
+    background:#e0e0e0;
+    font-size:1.2em;
+}
