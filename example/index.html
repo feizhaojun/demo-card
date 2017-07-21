@@ -8,24 +8,51 @@
 <body>
     <div>
         <h2>1 view示例</h2>
+        <blockquote>
+            <p>使用方法</p>
+            <p>直接new一个实例，使用一个对象参数设置属性</p>
+            <pre>
+                var view1 = new View({
+                    el:'渲染容器的id',
+                    title:'标题',
+                    content:'内容',
+                    className:'可以自定义根节点的class',
+                    isShow:'初始化的时候是否显示，默认 ture',
+                    onRender:'渲染完成之后的回调函数'
+                });
+            </pre>
+        </blockquote>
         <div id="view1">Loading</div>
         <p>使用一个按钮测试view组件显示show和隐藏hide两个方法：<input type="button" id="view1-trigger" value="隐藏" /></p>
-        
     </div>
     <div>
-        <h2>2 card示例</h2>
+        <h2>2 card示例1</h2>
+        <blockquote>
+            <p>Card 继承了 View的所有属性和方法，但是如果初始化的时候给Crad传入一个item值，Card组件会load这个item替换掉View的content</p>
+            <p>另外，Card 还多了2个属性 isCollapse 和 trigger：</p>
+            <p>isCollapse 默认是true，当前card实例初始化的时候是否是折叠状态</p>
+            <p>trigger 默认是容器本身，用户点击会触发展开或折叠方法 collapse() 、 expand()</p>
+        </blockquote>
         <div id="card1">Loading</div>
         <p>默认点击 card 会执行展开和折叠操作</p>
     </div>
     <div>
-        <h2>3 card示例</h2>
+        <h2>3 card示例2</h2>
+        <blockquote>
+            <p>设置一个trigger</p>
+            <p>指定一个触发按钮来展开和折叠 <input type="button" id="card2-trigger" value="tigger" /></p>
+        </blockquote>
         <div id="card2">Loading</div>
-        <p>指定一个触发按钮来展开和折叠 <input type="button" id="card2-trigger" value="tigger" />，因为Card同时暴露了展开和折叠的方法，所以也可以直接调用 card2.expand() 和 card2.collapse() <input type="button" onclick="card2.expand();" value="展开" /><input type="button" onclick="card2.collapse();" value="折叠" /></p>
+            <p>因为Card同时暴露了展开和折叠的方法，所以也可以直接调用 card2.expand() 和 card2.collapse() <input type="button" onclick="card2.expand();" value="展开" /><input type="button" onclick="card2.collapse();" value="折叠" /></p>
     </div>
     <div>
-        <h2>4 card示例</h2>
+        <h2>4 card示例3</h2>
+        <blockquote>
+            <p>card在实例化的时候，如果参数指定了item，会在初始化的时候就执行一次load()，并可以设置load完成后的回调函数。</p>
+        </blockquote>
         <div id="card3">Loading</div>
         <p>load 数据 <input type="button" id="card3-load" value="加载" /> <span id="tips"></span></p>
+        <p>因为想做示例来说明load，但是实际开发中应该在初始化的时候做特别的处理，不然就会像本例中创建card实例时做两次重复的DOM渲染（View的render和Card初始化时候的load），非常不利于性能。</p>
     </div>
 
     <script src="../components/view/View.js"></script>

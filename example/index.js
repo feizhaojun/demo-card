@@ -14,7 +14,7 @@ let view1 = new View({
 });
 
 // 使用一个按钮测试 View 组件的显示/隐藏
-document.getElementById('view1-trigger').addEventListener('click',(e)=>{
+document.getElementById('view1-trigger').addEventListener('click',function(){
     if(view1.isShow){
         view1.hide();
         this.value = '显示';
@@ -86,7 +86,7 @@ let data = {
     title:'change title',
     description:'change description change description change description change description'
 }
-document.getElementById('card3-load').addEventListener('click',(e)=>{
+document.getElementById('card3-load').addEventListener('click',()=>{
     card3.load(data,function(){
         console.log('load success');
         document.getElementById('tips').innerHTML = '加载完毕，可以展开查看结果。';

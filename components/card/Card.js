@@ -12,7 +12,7 @@ class Card extends View {
     constructor(opt){
         opt.className = 'card ' + opt.className;
         super(opt);
-        this.isCollapse = false;
+        this.isCollapse = true;
         this.load(opt.item,opt.onLoad);
         this.trigger = document.getElementById(opt.trigger || opt.el);
         this.trigger.addEventListener('click',()=>{
